@@ -7,3 +7,88 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/* Quiz container */
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Image container */
+.img-container {
+    max-width: 100%;
+}
+
+/* Question container */
+.question-container {
+    margin: 20px 0;
+}
+
+/* Answer container */
+.answer-container {
+    margin: 20px 0;
+}
+
+/* Buttons */
+.button-begin,
+.button-submit,
+.button-retry {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+/* Hide Submit and Retry buttons initially */
+.button-submit,
+.button-retry {
+    display: none;
+}
+
+/* Feedback containers */
+.feedback-container {
+    display: none;
+    /* Hide the feedback container by default */
+}
+
+.feedback-correct,
+.feedback-incorrect {
+    margin: 10px 0;
+}
+
+/* Progress container*/
+.progress-container {
+    margin: 20px 0;
+}
+
+/* Styles for result container */
+.result-container {
+    display: none;
+    /* Hide the result container by default */
+}
+
+.result-page {
+    margin: 20px 0;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 600px) {
+    .quiz-container {
+        padding: 10px;
+    }
+}
+
+/* Media query for medium screens */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .quiz-container {
+        max-width: 600px;
+    }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 1025px) {
+    .quiz-container {
+        max-width: 800px;
+    }
+}
