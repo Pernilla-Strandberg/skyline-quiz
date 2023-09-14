@@ -18,38 +18,46 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- Container for the Quiz -->
     <div class="quiz-container">
-        <div class="img-container">
-        <!-- Skyline images will appear here -->
+        <h1>Skyline Quiz</h1>
+        <!-- Progress bar -->
+        <div class="progress-bar">
+            <div class="progress-dot"></div>
+            <div class="progress-dot"></div>
+            <div class="progress-dot"></div>
+            <div class="progress-dot"></div>
+            <div class="progress-dot"></div>
         </div>
-        <div class="question-container">
-        <!-- Question or clue will appear here -->    
-        </div>
-        <div class="answer-container">
-        <!-- Single or/and Multiple choice question will appear here -->
-        </div>
-        <!-- Button to start quiz and button to submit answers -->
-        <button data-type="begin" class="button-begin">Start Quiz</button>
-        <button data-type="submit" class="button-submit">Submit</button>
+        <button id="start-button">Start</button>
     </div>
-    
-    <div class="feedback-container">
-        <!-- Show feedback for correct/incorrect answers -->
-        <div class="feedback-correct"></div>
-        <div class="feedback-incorrect"></div>
-        
-    </div>
-
-    <div class="progress-container">
-        <!-- A progress bar that shows quiz progress -->
-    </div>
-
-    <div class="result-container">
-        <div class = "result-page">
-        <!-- A result page to show when quiz is finished -->
+    <!-- Quiz box/window that is hidden until quiz starts -->
+    <div class="quiz-box hidden">
+        <img id="quiz-image" src="" alt="Image of a random skyline">
+        <!-- Random skyline images will appear here -->
+        <div class="question">
+            <p id="question-text"><!-- Question or clue will appear here --></p>
+            <form id="quiz-form">
+                <!-- Alternatives will show here -->
+                <label><input type="radio" name="answer" value="1"> Name 1</label>
+                <label><input type="radio" name="answer" value="2"> Name 2</label>
+                <label><input type="radio" name="answer" value="3"> Name 3</label>
+                <label><input type="radio" name="answer" value="4"> Name 4</label>
+                <label><input type="radio" name="answer" value="5"> Name 5</label>
+            </form>
         </div>
-        <!-- Button to take a quiz again -->
-        <button data-type="retry" class="button-retry">Take a new quiz</button>
+        <div class="feedback hidden">
+        <!-- Show feedback for correct/incorrect answers, hidden until answered question -->
+            <p id="feedback-text"></p>
+            <!-- Next button to continue -->
+            <button id="next-button">Next</button>
+        </div>
+    </div>
+    <div class="result-container hidden">
+        <h1>Quiz Result</h1>
+        <p id="result-text"></p>
+        <p id="total-score"></p>
+        <button id="new-quiz-button">Start Over</button>
     </div>
     <!-- Script -->
     <script src="assets/js/script.js"></script>
