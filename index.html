@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skyline Quiz</title>
     <!-- Meta tags for SEO -->
-    <meta name="description"
-        content="Quiz about city skylines. No account or login required. It's fun and it's free.">
-    <meta name="keywords"
-        content="Quiz, quiz, skyline, city skylines, skyline quiz, free quiz, fun quiz">
+    <meta name="description" content="Quiz about city skylines. No account or login required. It's fun and it's free.">
+    <meta name="keywords" content="Quiz, quiz, skyline, city skylines, skyline quiz, free quiz, fun quiz">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -17,43 +16,41 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <!-- Container for the Quiz -->
-    <div class="quiz" id="quiz-start">
-        <h1>Skyline Quiz</h1>
-        <button id="start-button">Start Quiz</button>
-    </div>
-    
-    <!-- Quiz view that is hidden until quiz starts -->
-    <div class="quiz hidden" id="quiz-question">
-        <h1>Question <span id="question-number">1</span></h1>
-        <div class="progress-bar">
-            <!-- Progress bar will be presented here -->
-        </div>
-        <img id="quiz-image" src="" alt="Image of a skyline">
-        <!-- Random skyline image will appear here -->
-        <div class="question">
-            <p id="question-text"><!-- Question text or clue appears here --></p>
-            <form id="quiz-form">
-                <!-- Alternatives will show here as radio buttons -->
-            </form>
-        </div>
-        <div class="feedback hidden">
-        <!-- Show feedback for correct/incorrect answers, hidden until answered question -->
-            <p id="feedback-text"></p>
-            <!-- Next button to continue -->
-            <button id="next-button">Next</button>
-        </div>
-    </div>
 
-    <!-- Result view -->
-    <div class="quiz hidden" id="quiz-result">
-        <h1>Quiz Results</h1>
-        <p id="result-text"></p>
-        <p id="total-score"></p>
-        <button id="new-quiz-button">Start Over</button>
+<body>
+    <!-- Container for Quiz -->
+    <div id="quiz-container">
+        
+        <div id="quiz-start">
+            <h1>Skyline Quiz</h1>
+            <button id="new-quiz-button">Start Quiz</button>
+        </div>
+
+        <!-- Question view  -->
+        <div id="quiz-question">
+            <img id="quiz-image" src="" alt="Image of a skyline">
+            <p id="quiz-question-text">
+            <!-- Question text or clue appears here -->
+            </p>
+            <form id="quiz-form">
+                    <!-- Alternatives will show here as radio buttons -->
+            </form>
+            <button id="submit-button">Submit</button>
+            <div id="progress-bar">
+                <!-- Progress bar will be presented here -->
+            </div>
+        </div>
+
+        <!-- Result view -->
+        <div id="quiz-result">
+            <h1>Quiz Results</h1>
+            <p id="result-text">Some text</p>
+            <p id="total-score"></p>
+            <button id="new-quiz-button">Start Over</button>
+        </div>
     </div>
     <!-- Script -->
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
