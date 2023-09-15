@@ -3,119 +3,130 @@
 
 /* Override browser default styles */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* Styling of the body */
+/* Background styling */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Quiz container */
+#quiz-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+    border-radius: 5px;
 }
 
-/* Styles for the quizzes */
-.quiz {
-    display: none;  /* Hides until quiz starts */
-    max-width: 100%;
-    margin: 0 auto;
-    margin-top: 20px;
-    text-align: center;
+/* Start view */
+#quiz-start {
+    margin:3rem 0;
 }
 
-h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 26px;
+#quiz-start h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-/* Button styling */
-button {
-    background-color: #2c2c2c;
-    color: white;
-    font-size: 20px;
-    padding: 12px 24px;
+/* Start and retry button */
+#new-quiz-button {
+    background-color: #4e4e4e;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
 }
 
-#quiz-start {
-    display:block;
-}
-
+/* Quiz question view */
 #quiz-question {
-    padding: 25px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
 }
 
-/* Make img responsive */
-img {
+#quiz-image {
     max-width: 100%;
     height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-/* Feedback */
-.feedback {
-    margin-top: 20px;
+#quiz-question-text {
+    font-size: 22px;
+    margin: 20px 0;
 }
 
-.feedback.hidden {
-    display: none; /* Hidden initially */
+/* Quiz form with possible answers */
+#quiz-form {
+    margin: 20px 0;
 }
 
-/* Choice labels */
+/* Answer text */
 label {
     display: block;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
-/* Progress bar */
-.progress-bar {
-    margin-top: 10px;
-    text-align: center;
+input[type="radio"] {
+    margin-right: 5px;
 }
 
-/* Empty progress dot */
+/* Question submit button */
+#submit-button {
+    background-color: #4e4e4e;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Progress bar container */
+#progress-bar {
+    width: 100%; 
+    height: 20px;  
+    margin-top: 3rem;
+    margin-bottom: 3rem;  
+    border-radius: 5px; 
+    overflow: hidden;
+}
+
+/* Progress dots */
 .progress-dot {
-    display: inline-block;
-    width: 10px;
+    width: 10px; 
     height: 10px;
-    margin: 0 4px;
-    background-color: #d3d3d3;
-    border-color: #2c2c2c;
-    border-radius: 50%;
+    margin: 0 2px; 
+    border: 1px solid #5f5f5f;
+    border-radius: 50%; 
+    display: inline-block; 
+    transition: background-color 0.3s;
 }
 
-/* Filled progress dot */
-.progress-dot.active {
-    background-color: #575757;;
+/* Answered progress dots */
+.progress-dot.answered {
+    background-color: #222222;
 }
 
-/* Media query for small screens */
-@media screen and (max-width: 600px) {
-    .quiz {
-        padding: 10px;
-    }
-    .progress-dot {
-        width: 8px;
-        height: 8px;
-        margin: 0 3px;
-    }
+/* Style for result view */
+#quiz-result {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-/* Media query for medium screens */
-@media screen and (min-width: 601px) and (max-width: 1024px) {
-    .quiz {
-        max-width: 600px;
-    }
-
+#result-text {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-/* Media query for larger screens */
-@media screen and (min-width: 1025px) {
-    .quiz {
-        max-width: 800px;
-    }
+#total-score {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
