@@ -203,7 +203,40 @@ function checkAnswer() {
       } else {
         displayResult();
       }
-    }   
+    }
+    updateProgress(); // UpdateProgress   
 }
+
+// Display question view
+function startQuiz() {
+    currentQuestion = 0;
+    score = 0;
+    incorrectAnswers = [];
+    quizQuestionContainer.style.display = 'block';
+    submitButton.style.display = 'inline-block';
+    quizStartContainer.style.display = 'none';
+    newQuizButton.style.display = 'none';
+    resultContainer.innerHTML = '';
+    displayQuestion();
+    updateProgress(); // Display progress bar
+}
+
+// Display progress bar and increase progress for each question
+function updateProgress() {
+    // Clear previous progress bar
+    progressBar.innerHTML = '';
+
+    // Display progress bar with dots
+    for (let i = 0; i < quizData.length; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('progress-dot');
+        if (i < currentQuestion) {
+            dot.classList.add('answered');
+        }
+        progressBar.appendChild(dot);
+    }
+}
+
+displayQuizStart(); // First view to be displayed
 
 
