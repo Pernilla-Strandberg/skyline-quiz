@@ -237,6 +237,16 @@ function updateProgress() {
     }
 }
 
+// Display result view
+function displayResult() {
+    quizQuestionContainer.style.display = 'none';
+    submitButton.style.display = 'none';
+    quizStartContainer.style.display = 'none';
+    resultContainer.style.display = 'block';
+    resultContainer.innerHTML += `<h2>Result</h2><p>You scored ${score} out of ${quizData.length}!</p>`;
+    newQuizButton.style.display = 'inline-block';
+}
+
 displayQuizStart(); // First view to be displayed
 
 
