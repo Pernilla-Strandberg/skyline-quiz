@@ -6,9 +6,9 @@
     <title>Skyline Quiz</title>
     <!-- Meta tags for SEO -->
     <meta name="description"
-        content="Quiz about city skylines. Compete for first place! No account or login required. It's fun and it's free.">
+        content="Quiz about city skylines. No account or login required. It's fun and it's free.">
     <meta name="keywords"
-        content="Quiz, quiz, skyline, city skylines, skyline quiz, free quiz, fun quiz, quiz competition">
+        content="Quiz, quiz, skyline, city skylines, skyline quiz, free quiz, fun quiz">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -19,31 +19,23 @@
 </head>
 <body>
     <!-- Container for the Quiz -->
-    <div class="quiz-container">
+    <div class="quiz" id="quiz-start">
         <h1>Skyline Quiz</h1>
-        <!-- Progress bar -->
-        <div class="progress-bar">
-            <div class="progress-dot"></div>
-            <div class="progress-dot"></div>
-            <div class="progress-dot"></div>
-            <div class="progress-dot"></div>
-            <div class="progress-dot"></div>
-        </div>
-        <button id="start-button">Start</button>
+        <button id="start-button">Start Quiz</button>
     </div>
-    <!-- Quiz box/window that is hidden until quiz starts -->
-    <div class="quiz-box hidden">
-        <img id="quiz-image" src="" alt="Image of a random skyline">
-        <!-- Random skyline images will appear here -->
+    
+    <!-- Quiz view that is hidden until quiz starts -->
+    <div class="quiz hidden" id="quiz-question">
+        <h1>Question <span id="question-number">1</span></h1>
+        <div class="progress-bar">
+            <!-- Progress bar will be presented here -->
+        </div>
+        <img id="quiz-image" src="" alt="Image of a skyline">
+        <!-- Random skyline image will appear here -->
         <div class="question">
-            <p id="question-text"><!-- Question or clue will appear here --></p>
+            <p id="question-text"><!-- Question text or clue appears here --></p>
             <form id="quiz-form">
-                <!-- Alternatives will show here -->
-                <label><input type="radio" name="answer" value="1"> Name 1</label>
-                <label><input type="radio" name="answer" value="2"> Name 2</label>
-                <label><input type="radio" name="answer" value="3"> Name 3</label>
-                <label><input type="radio" name="answer" value="4"> Name 4</label>
-                <label><input type="radio" name="answer" value="5"> Name 5</label>
+                <!-- Alternatives will show here as radio buttons -->
             </form>
         </div>
         <div class="feedback hidden">
@@ -53,8 +45,10 @@
             <button id="next-button">Next</button>
         </div>
     </div>
-    <div class="result-container hidden">
-        <h1>Quiz Result</h1>
+
+    <!-- Result view -->
+    <div class="quiz hidden" id="quiz-result">
+        <h1>Quiz Results</h1>
         <p id="result-text"></p>
         <p id="total-score"></p>
         <button id="new-quiz-button">Start Over</button>

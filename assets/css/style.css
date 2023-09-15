@@ -10,67 +10,50 @@
 
 /* Styling of the body */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
-}
-
-/* Quiz container */
-.quiz-container {
-    margin: 0 auto;
-    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
-/* Progress bar */
-.progress-bar {
-    margin-top: 10px;
+/* Styles for the quizzes */
+.quiz {
+    display: none;  /* Hides until quiz starts */
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
 }
 
-/* Empty progress dot */
-.progress-dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    background-color: #d3d3d3;
-    border-color: #2c2c2c;
-    border-radius: 50%;
-}
-
-/* Filled progress dot */
-.progress-dot.active {
-    background-color: #575757;;
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 26px;
 }
 
 /* Button styling */
 button {
     background-color: #2c2c2c;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     padding: 12px 24px;
     border: none;
     cursor: pointer;
 }
 
-/* Question and answers */
-.quiz-box {
-    display: none; /* Hidden initially */
-    max-width: 550px;
-    margin: 25px auto;
+#quiz-start {
+    display:block;
+}
+
+#quiz-question {
     padding: 25px;
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.question {
-    margin-top: 20px;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
+/* Make img responsive */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Feedback */
@@ -82,36 +65,57 @@ label {
     display: none; /* Hidden initially */
 }
 
-.result-container {
-    display: none; /* Hidden initially */
-    max-width: 550px;
-    margin: 25px auto;
-    padding: 25px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+/* Choice labels */
+label {
+    display: block;
+    margin-top: 10px;
 }
 
-.hidden {
-    display: none;  /* Class to hide elements */
+/* Progress bar */
+.progress-bar {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Empty progress dot */
+.progress-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    background-color: #d3d3d3;
+    border-color: #2c2c2c;
+    border-radius: 50%;
+}
+
+/* Filled progress dot */
+.progress-dot.active {
+    background-color: #575757;;
 }
 
 /* Media query for small screens */
 @media screen and (max-width: 600px) {
-    .quiz-container {
+    .quiz {
         padding: 10px;
+    }
+    .progress-dot {
+        width: 8px;
+        height: 8px;
+        margin: 0 3px;
     }
 }
 
 /* Media query for medium screens */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-    .quiz-container {
+    .quiz {
         max-width: 600px;
     }
+
 }
 
 /* Media query for larger screens */
 @media screen and (min-width: 1025px) {
-    .quiz-container {
+    .quiz {
         max-width: 800px;
     }
 }
