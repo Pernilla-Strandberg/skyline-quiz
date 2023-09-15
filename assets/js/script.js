@@ -92,3 +92,13 @@ const quizData = [
         answer: 'Choice 2',
     },
 ];
+
+const quizContainer = document.getElementById('quiz-container');
+const quizStartContainer = document.getElementById('quiz-start');
+const newQuizButton = document.getElementById('new-quiz-button');
+const quizQuestionContainer = document.getElementById('quiz-question');
+const submitButton = document.getElementById('submit-button');
+const progressBar = document.getElementById('progress-bar');
+const resultContainer = document.getElementById('quiz-result');
+
+
