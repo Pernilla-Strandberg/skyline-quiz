@@ -117,6 +117,16 @@ function displayQuizStart() {
     resultContainer.style.display = 'none'
 }
 
+// Enable or disable submit button in question view
+function enableSubmitButton() {
+    // Enable 
+    submitButton.disabled = false;
+}
+function disableSubmitButton() {
+    // Disable
+    submitButton.disabled = true;
+}
+
 // Display quiz data
 function displayQuestion() {
     const questionData = quizData[currentQuestion];
@@ -151,7 +161,19 @@ function displayQuestion() {
     progressBar.style.display = 'block';
     updateProgress();
 
-    
+    // Enable or disable submit button
+    const radioButtons = document.querySelectorAll('input[name="quiz"]');
+    radioButtons.forEach((radioButton) => {
+        radioButton.addEventListener('change', () => {
+            if (radioButton.checked) {
+                enableSubmitButton();
+            } else {
+                disableSubmitButton();
+            }
+        });
+    });
+    // Disable submit button at start
+    disableSubmitButton();
 }
 
 
