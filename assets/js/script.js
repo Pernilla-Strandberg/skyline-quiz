@@ -176,4 +176,34 @@ function displayQuestion() {
     disableSubmitButton();
 }
 
+// Add eventListeners to buttons and call functions on click
+submitButton.addEventListener('click', checkAnswer);
+newQuizButton.addEventListener('click', startQuiz);
+
+// Check if answer is correct and add score
+function checkAnswer() {
+    const selectedOption = document.querySelector('input[name="quiz"]:checked');
+    if (selectedOption) {
+      const answer = selectedOption.value;
+      if (answer === quizData[currentQuestion].answer) {
+        score++;
+      } else {
+        incorrectAnswers.push({
+          question: quizData[currentQuestion].question,
+          incorrectAnswer: answer,
+          correctAnswer: quizData[currentQuestion].answer,
+        });
+      }
+      // Check if current question is within the array range to show next question 
+      // Display the result view if current question is not within the array range
+      currentQuestion++;
+      selectedOption.checked = false;
+      if (currentQuestion < quizData.length) {
+        displayQuestion();
+      } else {
+        displayResult();
+      }
+    }   
+}
+
 
