@@ -108,6 +108,14 @@ let currentQuestion = 0;
 let score = 0;
 let incorrectAnswers = [];
 
+// Mix array
+function mixArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 // Display first view of container and button, hide other views and elements
 function displayQuizStart() {
     quizQuestionContainer.style.display = 'none';
