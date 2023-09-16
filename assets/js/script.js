@@ -1,89 +1,64 @@
 // Store quizData in array
 
-const quizData = [
-    {
-      image: 'assets/images/image1.jpg',
-      question: 'Skyline?',
-      options: ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
-      answer: 'Choice 2',
+const quizData = [{
+        image: 'assets/images/image1.jpg',
+        question: 'Guess the skyline!',
+        options: ['São Paulo, Brazil', 'Bangkok, Thailand', 'Chicago, United States', 'Dubai, United Arab Emirates', 'Wuhan, China'],
+        answer: 'Dubai, United Arab Emirates',
     },
     {
         image: 'assets/images/image2.jpg',
-        question: 'Skyline 2?',
-        options: ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
-        answer: 'Choice 2',
+        question: 'Guess the skyline!',
+        options: ['Dublin, Ireland', 'London, England', 'Toronto, Canada', 'Los Angeles, United States', 'Helsinki, Finland'],
+        answer: 'London, England',
     },
     {
         image: 'assets/images/image3.jpg',
-        question: 'Skyline 3?',
-        options: ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
-        answer: 'Choice 2',
+        question: 'Guess the skyline!',
+        options: ['Mumbai, India', 'Jakarta, Indonesia', 'Warsaw, Poland', 'Yokohama, Japan', 'Istanbul, Turkey'],
+        answer: 'Istanbul, Turkey',
     },
     {
         image: 'assets/images/image4.jpg',
-        question: 'Skyline 4?',
-        options: ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
-        answer: 'Choice 2',
+        question: 'Guess the skyline!',
+        options: ['Chicago, United States', 'Milano, Italy', 'Frankfurt am Main, Germany', 'Malmö, Sweden', 'Barcelona, Spain'],
+        answer: 'Milano, Italy',
     },
     {
         image: 'assets/images/image5.jpg',
-        question: 'Skyline 5?',
-        options: ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
-        answer: 'Choice 2',
+        question: 'Guess the skyline!',
+        options: ['Singapore, Singapore', 'Las Vegas, United States', 'São Paulo, Brazil', 'Kuala Lumpur, Malaysia', 'Tokyo, Japan'],
+        answer: 'Singapore, Singapore',
     },
     {
         image: 'assets/images/image6.jpg',
-        question: 'Skyline 6?',
-        options: ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
-        answer: 'Choice 2',
+        question: 'Guess the skyline!',
+        options: ['Vilnius, Lithuania', 'Toronto, Canada', 'Wuhan, China', 'Dublin, Ireland', 'London, England'],
+        answer: 'Dublin, Ireland',
     },
     {
         image: 'assets/images/image7.jpg',
-        question: 'Skyline 7?',
-        options: ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
-        answer: 'Choice 2',
+        question: 'Guess the skyline!',
+        options: ['Warsaw, Poland', 'Alexandria, Egypt', 'Kowloon, Hong Kong', 'Chicago, United States', 'Bangkok, Thailand'],
+        answer: 'Kowloon, Hong Kong',
     },
     {
         image: 'assets/images/image8.jpg',
-        question: 'Skyline 8?',
-        options: ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
-        answer: 'Choice 2',
+        question: 'Guess the skyline!',
+        options: ['Milano, Italy', 'Helsinki, Finland', 'Kowloon, Hong Kong', 'Frankfurt am Main, Germany', 'Malmö, Sweden'],
+        answer: 'Malmö, Sweden',
     },
     {
         image: 'assets/images/image9.jpg',
-        question: 'Skyline 9?',
-        options: ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
-        answer: 'Choice 2',
+        question: 'Guess the skyline!',
+        options: ['Barcelona, Spain', 'Los Angeles, United States', 'Istanbul, Turkey', 'Alexandria, Egypt', 'Mumbai, India'],
+        answer: 'Los Angeles, United States',
     },
     {
         image: 'assets/images/image10.jpg',
-        question: 'Skyline 10?',
-        options: ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
-        answer: 'Choice 2',
-    },
-    {
-        image: 'assets/images/image11.jpg',
-        question: 'Skyline 11?',
-        options: ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
-        answer: 'Choice 2',
-    },
-    {
-        image: 'assets/images/image12.jpg',
-        question: 'Skyline 12?',
-        options: ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
-        answer: 'Choice 2',
-    },
-    {
-        image: 'assets/images/image13.jpg',
-        question: 'Skyline 13?',
-        options: ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
-        answer: 'Choice 2',
-    },
-    {
-        image: 'assets/images/image14.jpg',
-        question: 'Skyline 14?',
-        options: ['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4', 'Choice 5'],
-        answer: 'Choice 2',
+        question: 'Guess the skyline!',
+        options: ['Yokohama, Japan', 'Jakarta, Indonesia', 'Las Vegas, United States', 'Kowloon, Hong Kong', 'Kuala Lumpur, Malaysia'],
+        answer: 'Kuala Lumpur, Malaysia',
     },
 ];
 
@@ -124,6 +99,7 @@ function enableSubmitButton() {
     // Enable 
     submitButton.disabled = false;
 }
+
 function disableSubmitButton() {
     // Disable
     submitButton.disabled = true;
@@ -186,25 +162,25 @@ newQuizButton.addEventListener('click', startQuiz);
 function checkAnswer() {
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
     if (selectedOption) {
-      const answer = selectedOption.value;
-      if (answer === quizData[currentQuestion].answer) {
-        score++;
-      } else {
-        incorrectAnswers.push({
-          question: quizData[currentQuestion].question,
-          incorrectAnswer: answer,
-          correctAnswer: quizData[currentQuestion].answer,
-        });
-      }
-      // Check if current question is within the array range to show next question 
-      // Display the result view if current question is not within the array range
-      currentQuestion++;
-      selectedOption.checked = false;
-      if (currentQuestion < quizData.length) {
-        displayQuestion();
-      } else {
-        displayResult();
-      }
+        const answer = selectedOption.value;
+        if (answer === quizData[currentQuestion].answer) {
+            score++;
+        } else {
+            incorrectAnswers.push({
+                question: quizData[currentQuestion].question,
+                incorrectAnswer: answer,
+                correctAnswer: quizData[currentQuestion].answer,
+            });
+        }
+        // Check if current question is within the array range to show next question 
+        // Display the result view if current question is not within the array range
+        currentQuestion++;
+        selectedOption.checked = false;
+        if (currentQuestion < quizData.length) {
+            displayQuestion();
+        } else {
+            displayResult();
+        }
     }
     updateProgress(); // UpdateProgress   
 }
@@ -250,5 +226,3 @@ function displayResult() {
 }
 
 displayQuizStart(); // First view to be displayed
-
-

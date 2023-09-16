@@ -1,5 +1,5 @@
 /* Google fonts import */
-@import url('#');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Luckiest+Guy&family=Modak&family=Poppins:wght@300&display=swap');
 
 /* Override browser default styles */
 * {
@@ -9,9 +9,18 @@
 }
 
 /* Background styling */
+html {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 2%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 98%, rgba(0, 0, 0, 1) 100%), url(/assets/images/pexels-pixabay-302820.jpg);
+    background-color: #000000;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: bottom;
+}
+
 body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Quiz container */
@@ -27,12 +36,13 @@ body {
 
 /* Start view */
 #quiz-start {
-    margin:3rem 0;
+    margin: 3rem 0;
 }
 
 #quiz-start h1 {
-    font-size: 48px;
+    font-size: 4rem;
     margin-bottom: 20px;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 /* Start and retry button */
@@ -90,22 +100,22 @@ input[type="radio"] {
 
 /* Progress bar container */
 #progress-bar {
-    width: 100%; 
-    height: 20px;  
+    width: 100%;
+    height: 20px;
     margin-top: 3rem;
-    margin-bottom: 3rem;  
-    border-radius: 5px; 
+    margin-bottom: 3rem;
+    border-radius: 5px;
     overflow: hidden;
 }
 
 /* Progress dots */
 .progress-dot {
-    width: 10px; 
+    width: 10px;
     height: 10px;
-    margin: 0 2px; 
+    margin: 0 2px;
     border: 1px solid #5f5f5f;
-    border-radius: 50%; 
-    display: inline-block; 
+    border-radius: 50%;
+    display: inline-block;
     transition: background-color 0.3s;
 }
 
@@ -129,4 +139,26 @@ input[type="radio"] {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+
+/* Responsive styling large screens and wide screens */
+
+/* Apply smooth gradient to edges of image */
+@media only screen and (min-width: 1279px) {
+    html {
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 89%, rgba(0, 0, 0, 1) 100%), url(/assets/images/pexels-pixabay-302820.jpg);
+    }
+}
+
+@media only screen and (min-width: 2700px) {
+    html {
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 1) 100%), url(/assets/images/pexels-pixabay-302820.jpg);
+    }
+}
+
+@media only screen and (min-width: 3000px) {
+    html {
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 1) 100%), url(/assets/images/pexels-pixabay-302820.jpg);
+    }
 }
