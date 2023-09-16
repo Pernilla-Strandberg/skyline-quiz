@@ -70,9 +70,9 @@ App is working nicely when testing it on different sizes in chromes developing t
 
 ### Validator Testing 
 
-- HTML - No errors ![The W3C Markup Validation Service](https://validator.w3.org/)
-- CSS - No errors ![Jigsaw](https://jigsaw.w3.org/css-validator/validator.html.en)
-- JS  - Minor issues with citation/quotation marks and unused variables ![JSHint](https://jshint.com/)
+- HTML - No errors - https://validator.w3.org/
+- CSS - No errors - https://jigsaw.w3.org/css-validator/validator.html.en
+- JS  - Minor issues with citation/quotation marks and unused variables - https://jshint.com/
 
 ### Unfixed Bugs
 
@@ -85,7 +85,7 @@ No bugs found.
   - From the source section drop-down menu, select the Master Branch
   - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - ![Skyline Quiz](https://pernilla-strandberg.github.io/skyline-quiz/) 
+The live link can be found here - https://pernilla-strandberg.github.io/skyline-quiz/
 
 ## Credits  
 
