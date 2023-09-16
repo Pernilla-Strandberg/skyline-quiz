@@ -173,7 +173,61 @@ input[type="radio"] {
 
 /* Responsive styling */
 
-/* Apply smooth gradient to edges of image */
+
+@media only screen and (max-width: 375px) {
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        font-family: 'Luckiest Guy', cursive;
+        color: #FFF;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        font-family: 'Poppins', serif;
+        text-align: center;
+    }
+
+    #quiz-container {
+        margin: 0;
+        padding: 1rem;
+        border-radius: 0px;
+    }
+
+    #quiz-question-text {
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 720px) {
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 10px;
+        font-family: 'Luckiest Guy', cursive;
+        color: #FFF;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        font-family: 'Poppins', serif;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+}
+
+/* Apply smooth gradient to edges of image on wide screens */
 @media only screen and (min-width: 1279px) {
     html {
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 89%, rgba(0, 0, 0, 1) 100%), url(/assets/images/pexels-pixabay-302820.jpg);
@@ -189,41 +243,5 @@ input[type="radio"] {
 @media only screen and (min-width: 3000px) {
     html {
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 1) 100%), url(/assets/images/pexels-pixabay-302820.jpg);
-    }
-}
-
-
-@media only screen and (max-width: 450px) {
-    h1 {
-        font-size: 3rem;
-        margin-bottom: 10px;
-        font-family: 'Luckiest Guy', cursive;
-        color: #FFF;
-        text-align: center;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        font-family: 'Poppins', serif;
-        text-align: center;
-    }
-}
-
-
-@media only screen and (max-width: 720px) {
-    h1 {
-        font-size: 5rem;
-        margin-bottom: 10px;
-        font-family: 'Luckiest Guy', cursive;
-        color: #FFF;
-        text-align: center;
-    }
-    
-    h2 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-        font-family: 'Poppins', serif;
-        text-align: center;
     }
 }
