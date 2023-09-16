@@ -1,108 +1,129 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Skyline Quiz App
 
-Welcome Pernilla Strandberg,
+The Skyline Quiz App is a web-based quiz game that challenges users' knowledge of city skylines from around the world. It's a fun and interactive way to test your familiarity with iconic cityscapes.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Skyline Quiz Mockup](/assets/images/screenshots/landing_page.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Features
 
-## Gitpod Reminders
+- Randomly generated questions of city skyline images.
+- Progress tracking with a visual progress bar.
+- Score tracking that display result at the end of the quiz.
+- Validation to prevent empty answers
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Existing Features
 
-`python3 -m http.server`
+- __Landing Page__
 
-A blue button should appear to click: _Make Public_,
+  - Background image with gradient overlay for a smooth transition between image and background
+  - Straight forward view and easy to understand
 
-Another blue button should appear to click: _Open Browser_.
+![Nav_Bar_small_screens](/assets/images/screenshots/landing_page.png)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+- __Question view__
 
-Another blue button should appear to click: _Open Browser_.
+  - Single choice question 
+  - Straight forward layout and easy to understand question navigation
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![Question View](/assets/images/screenshots/question_view.png)
 
-To log into the Heroku toolbelt CLI:
+- __Result view__
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+  - Single choice question 
+  - Straight forward layout and easy to understand question navigation
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![Result View](/assets/images/screenshots/result_view.png)
 
-------
 
-## Release History
+### Features Left to Implement
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+  - Alert message to user when answer choice is missing
+  - Retake quiz button on the Result view
+  - Randomize question to present in array 
+  - Progressbar to be clickable and allows navigation between questions
+    Progress items style
+  - Feedback window when answering correct/incorrect to provide more information
+  - Hover state on buttons
+  - Add favicon images
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Technologies Used
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- HTML
+- CSS
+- JavaScript
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Getting Started
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+To run the Skyline Quiz locally:
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+1. Clone this repository to your local machine:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+   ```bash
+   git clone https://github.com/pernilla_strandberg/skyline-quiz.git
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+2. Open the index.html file in your web browser to start.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Testing 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+App is working nicely when testing it on different sizes in chromes developing tool. 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Validator Testing 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- HTML - No errors ![The W3C Markup Validation Service](https://validator.w3.org/)
+- CSS - No errors ![Jigsaw](https://jigsaw.w3.org/css-validator/validator.html.en)
+- JS  - Minor issues with citation/quotation marks and unused variables ![JSHint](https://jshint.com/)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Unfixed Bugs
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+No bugs found.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Deployment
 
-------
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab 
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-## FAQ about the uptime script
+The live link can be found here - ![Skyline Quiz](https://pernilla-strandberg.github.io/skyline-quiz/) 
 
-**Why have you added this script?**
+## Credits  
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### assets/images
 
-**How will this affect me?**
+The skyline photos used for background picture and questions are from Pexels:
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+Image 1
+Photo by Aleksandar Pasaric: https://www.pexels.com/photo/landscape-photograpy-of-city-during-night-692103/
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+Image 2
+Photo by Andrea De Santis: https://www.pexels.com/photo/lighted-city-buildings-near-body-of-water-at-night-10998027/
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+Image 3
+Photo by Aykut Kılıç: https://www.pexels.com/photo/a-stunning-view-of-the-bosphorus-bridge-at-istanbul-during-the-night-7386650/
 
-**So….?**
+Image 4
+Photo by Francesco Ungaro: https://www.pexels.com/photo/green-leafed-trees-near-concrete-buildings-409127/
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+Image 5
+Photo by Kin Pastor: https://www.pexels.com/photo/marina-bay-sands-singapore-777059/
 
-**Can I opt out?**
+Image 6
+Photo by Luciann Photography: https://www.pexels.com/photo/white-concrete-bridge-3566191/
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+Image 7
+Photo by Nextvoyage: https://www.pexels.com/photo/photography-of-high-rise-buildings-1095826/
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+Image 8
+Photo by Pipo Stoltz: https://www.pexels.com/photo/city-skyline-across-body-of-water-13071531/
 
-**Anything more?**
+Image 9
+Photo by Roberto Nickson: https://www.pexels.com/photo/white-and-brown-buildings-2709964/
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+Image 10
+Photo by Umar Mukhtar: https://www.pexels.com/photo/scenic-view-of-city-during-evening-1538177/
 
----
+Background image
+Photo by Pixabay: https://www.pexels.com/photo/shanghai-china-cityscape-302820/
 
-Happy coding!
+# Enjoy playing the Skyline Quiz!
