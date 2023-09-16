@@ -2,7 +2,7 @@
 
 The Skyline Quiz App is a web-based quiz game that challenges users' knowledge of city skylines from around the world. It's a fun and interactive way to test your familiarity with iconic cityscapes.
 
-![Skyline Quiz Mockup](/assets/images/screenshots/landing_page.png)
+![Skyline Quiz Mockup](/assets/images/screenshots/1.png)
 
 ## Features
 
@@ -17,9 +17,8 @@ The Skyline Quiz App is a web-based quiz game that challenges users' knowledge o
 
   - Background image with gradient overlay for a smooth transition between image and background
   - Straight forward view and easy to understand
-
-![Nav_Bar_small_screens](/assets/images/screenshots/landing_page.png)
-
+ 
+![Question View](/assets/images/screenshots/landing_page.png)
 
 - __Question view__
 
@@ -32,8 +31,6 @@ The Skyline Quiz App is a web-based quiz game that challenges users' knowledge o
 
   - Single choice question 
   - Straight forward layout and easy to understand question navigation
-
-![Result View](/assets/images/screenshots/result_view.png)
 
 
 ### Features Left to Implement
